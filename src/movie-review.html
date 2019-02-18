@@ -1,0 +1,78 @@
+<template>
+        <form submit.delegate ="formSubmitted($event)">
+                <h1>Skriv din Recension <span class="badge badge-secondary">NU!</span></h1>
+                <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Förnamn">
+                        </div>
+                        <div class="col">
+                          <input type="text" ref="titleInput" class="form-control" placeholder="FilmNamn">
+                        
+                         
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                            <small id="emailHelp" class="form-text text-muted">Vi delar aldrig ut din Email till någon.</small>
+
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Lösenord">
+                          </div>
+                          
+                <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Recension område</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      Valt värde: ${selectedRating}
+                      <div repeat.for="rating of ratings">
+                            <input
+                            id= "radioInput_${rating}"
+                            type="radio"
+                            name="hej"
+                            model.bind="rating"
+                            checked.bind="selectedRating"
+                            />
+                            <label for="radioInput_${rating}">${rating}</label>
+                        </div>
+                      <div>
+                            <button type="submit" value="KLICKA" class="btn btn-outline-dark">Skicka in</button>
+                      </div>
+                      
+
+              <div class="card text-center">
+                    <div class="card-header">
+                      Bästa Recensionen denna månad
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Deadpool Recension</h5>
+                      <p class="card-text">Deadpool filmen är en av de bästa komidierna släppta på senaste tiden.</p>
+                      <a href="#" class="btn btn-primary">Ta mig dit</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                      3 dagar sedan
+                    </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">A million ways to die in the west</h5>
+                              <p class="card-text">10/10</p>
+                              <a href="#" class="btn btn-primary">Ta mig dit</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Kingsman</h5>
+                              <p class="card-text">11/10</p>
+                              <a href="#" class="btn btn-primary">Ta mig dit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                            </form>
+</template>
