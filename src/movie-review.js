@@ -12,10 +12,17 @@ export class moviereview {
   this.dialogService = dialogService;
   }
   
+  
 
     selectedGenres = [];
     async formSubmitted(event){
         //alert("Skickat:  " + this.titleInput.value + "  Poäng: " + this.selectedRating + "  Genre: " + this.selectedGenre)
+        let movieReview
+        {
+          Title="this.titleInput.value",
+          rating="this.selectedRating",
+          genre="this.selectedGenre"
+        };
         let response = await this.dialogService.open({ viewModel: DisplayReview, model: "Title:" + this.titleInput.value + "  Poäng:" + this.selectedRating + "  Genre:" + this.selectedGenre, lock: false }).whenClosed();
         if (!response.wasCancelled) {
           console.log('good - ', response.output);
