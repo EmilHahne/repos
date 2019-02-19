@@ -1,0 +1,12 @@
+<template>
+    <require from="./list-reviews.css"></require>
+<div id="list_review">
+    <div class="movie-card" repeat.for="review of reviews">
+    <h2>${review.title }, ${ review.rating}/10</h2>
+    <h3>${review.genre}</h3>
+    <p>Recension av:${review.name}</p>
+    <p>${review.review}</p>
+</div>
+</div>
+
+</template>

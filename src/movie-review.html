@@ -3,7 +3,7 @@
                 <h1>Skriv din Recension <span class="badge badge-secondary">NU!</span></h1>
                 <div class="row">
                         <div class="col">
-                          <input type="text" class="form-control" placeholder="Förnamn">
+                          <input type="text" ref="nameInput" class="form-control" placeholder="Namn">
                         </div>
                         <div class="col">
                           <input type="text" ref="titleInput" class="form-control" placeholder="Film namn">
@@ -23,7 +23,7 @@
                           
                 <div class="form-group">
                         <label for="exampleFormControlTextarea1">Recension område</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input type="text" class="form-control" ref="reviewInput" id="exampleFormControlTextarea1"></input>
                       </div>
                       Valda genres: ${selectedGenre}
                       <div class="dropdown">

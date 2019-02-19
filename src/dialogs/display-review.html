@@ -1,9 +1,15 @@
 <template>
         <ux-dialog>
           <ux-dialog-body>
-            <h2>Här ska vi visa info om vår recension om:</h2>
-            <h3>${movieTitle}</h3>
-            <input value.bind="person.firstName">
+            <h1>Recension:</h1>
+            <h3>Titel: ${movieReview.title}</h3>
+            <h3>Genre: ${movieReview.genre}</h3>
+            <h3>Poäng: ${movieReview.rating}/10</h3>
+            <h8>Namn: ${movieReview.name}</h8>
+            <h6></h6>
+            <h8>Review: ${movieReview.review}</h8>
+            
+            <!--<input value.bind="person.firstName">-->
           </ux-dialog-body>
       
           <ux-dialog-footer>
