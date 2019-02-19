@@ -6,16 +6,16 @@
                           <input type="text" class="form-control" placeholder="Förnamn">
                         </div>
                         <div class="col">
-                          <input type="text" ref="titleInput" class="form-control" placeholder="FilmNamn">
+                          <input type="text" ref="titleInput" class="form-control" placeholder="Film namn">
                         
                          
                          
                         </div>
                       </div>
                       <div class="form-group">
-                            <small id="emailHelp" class="form-text text-muted">Vi delar aldrig ut din Email till någon.</small>
+                            <small id="emailHelp" class="form-text text-muted">Vi delar aldrig ut din E-mail till någon.</small>
 
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
                           </div>
                           <div class="form-group">
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Lösenord">
@@ -25,6 +25,19 @@
                         <label for="exampleFormControlTextarea1">Recension område</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
+                      Valda genres: ${selectedGenre}
+                      <div class="dropdown">
+
+                          <label>Välj genres:</label>
+                          <div>
+                                  <select multiple value.bind="selectedGenre">
+                                    <option repeat.for="genre of genres"
+                                            value.bind="genre">
+                                      ${genre}
+                                    </option>
+                                  </select>
+</div>
+</div>
                       Valt värde: ${selectedRating}
                       <div repeat.for="rating of ratings">
                             <input
